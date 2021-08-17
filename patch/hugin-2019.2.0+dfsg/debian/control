@@ -1,0 +1,131 @@
+Source: hugin
+Section: graphics
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Uploaders: Andreas Metzler <ametzler@debian.org>
+# hugin can use Boost::Signal or in Boost >= 1.54 Boost::Signal2 which is
+# shipped in libboost-dev.
+Build-Depends:
+ cmake (>= 3.8),
+ debhelper-compat (= 12),
+ dh-python,
+ libboost-filesystem-dev (>= 1.47),
+ libboost-graph-dev (>= 1.47),
+ libboost-iostreams-dev (>= 1.47),
+ libboost-regex-dev (>= 1.47),
+ libboost-signals-dev (>= 1.47) | libboost-dev (>= 1.54),
+ libboost-system-dev (>= 1.47),
+ libboost-thread-dev (>= 1.47),
+ libexiv2-dev (>= 0.12),
+ libfftw3-dev,
+ libflann-dev,
+ libglew-dev,
+ libjpeg-dev,
+ liblcms2-dev,
+ libopenexr-dev,
+ libpano13-dev (>= 2.9.19~beta1),
+ libpng-dev,
+ libsqlite3-dev,
+ libtiff-dev,
+ libvigraimpex-dev (>=1.9),
+ libwxgtk3.0-gtk3-dev (>= 3.0.4+dfsg-12),
+ libx11-dev,
+ pkg-config,
+ python3-dev,
+ swig (>= 2.0.4),
+ zlib1g-dev
+Build-Conflicts: wx2.6-headers, wx2.8-headers
+Standards-Version: 4.4.1
+Rules-Requires-Root: no
+Homepage: http://hugin.sourceforge.net/
+Vcs-Git: https://salsa.debian.org/debian-phototools-team/hugin.git
+Vcs-Browser: https://salsa.debian.org/debian-phototools-team/hugin
+
+Package: hugin
+Architecture: any
+Depends:
+ enblend (>= 3.2),
+ enfuse,
+ hugin-tools (= ${binary:Version}),
+ libimage-exiftool-perl,
+ make,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Breaks: hugin-bin (<< 0.7.0~svn)
+Replaces:
+ hugin-bin (<< 0.7.0~svn),
+ hugin-data (<< 0.7.0~svn),
+ hugin-tools (<< 0.7.0~svn)
+Suggests: dcraw | rawtherapee | darktable
+Description: panorama photo stitcher - GUI tools
+ Hugin is a panorama photo stitching program. Essentially, Hugin is a
+ GUI frontend for Panorama Tools. Stitching is accomplished by using
+ several overlapping photos taken from the same location, and using
+ control points to align and transform the photos so that they can be
+ blended together to form a larger image. Hugin allows for the easy
+ creation of control points between two images, optimization of the
+ image transforms, and much more.
+ .
+ This package includes the following graphical interfaces, using the
+ command-line tools provided in the hugin-tools package:
+  * hugin                - Hugin panorama creator.
+  * hugin_stitch_project - Hugin batch stitcher.
+  * PTBatcherGUI         - Batch controller for the stitching process.
+  * calibrate_lens_gui   - Lens calibration tool.
+
+Package: hugin-tools
+Architecture: any
+Depends:
+ hugin-data (= ${source:Version}),
+ ${misc:Depends},
+ ${python3:Depends},
+ ${shlibs:Depends}
+Breaks: hugin-bin (<< 0.7.0~svn), ${python3:Breaks}
+Replaces: hugin-bin (<< 0.7.0~svn)
+Recommends: libpano13-bin
+Provides: python-hsi
+Description: panorama photo stitcher - commandline tools
+ Hugin is a panorama photo stitching program.
+ .
+ This package includes command-line tools used by hugin and other
+ packages for image stitching and High Dynamic Range (HDR) images:
+  * align_image_stack  - Align overlapping images for HDR creation.
+  * autooptimiser      - Optimize image positions.
+  * celeste_standalone - Remove cloud-like control points.
+  * cpclean            - Remove wrong control points.
+  * cpfind             - Patent-free control-point detector
+  * deghosting_mask    - Creates mask for removing ghosting in images.
+  * fulla              - Correct lens distortion, vignetting, and
+                         chromatic aberration.
+  * geocpset           - Set geometric control points.
+  * hugin_executor     - CLI stitching tool.
+  * hugin_hdrmerge     - Merge overlapping images.
+  * hugin_lensdb       - Hugin lens database maintenance.
+  * icpfind            - Control-point detector wrapper program.
+  * linefind           - Detect vertical features in images.
+  * nona               - Remap images. (Also does simple stitching.)
+  * pano_modify        - Change output parameters of project file.
+  * pto_gen            - Generate a Hugin project file from a list of images.
+  * pto_lensstack      - Modify assigned lenses and stack in pto files.
+  * pto_mask           - Apply a mask.
+  * pto_merge          - Merges two or more Hugin project files.
+  * pto_move           - Move a project file with all images in it.
+  * pto_template       - Apply a template file.
+  * pto_var            - Change image variables inside Hugin .pto project
+                         files
+  * tca_correct        - Calculate transverse chromatic aberration.
+  * verdandi           - Blend images using watershed algorithm.
+  * vig_optimize       - Determine the radial vignetting.
+
+Package: hugin-data
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}
+Breaks: ${python3:Breaks}
+# imports of included plugins
+Suggests: python-wxgtk4.0
+Description: panorama photo stitcher - common data files
+ Hugin is a panorama photo stitching program.
+ .
+ This package includes the data files needed by the hugin and
+ hugin-tools packages.

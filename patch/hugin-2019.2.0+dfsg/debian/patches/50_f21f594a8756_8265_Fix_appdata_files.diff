@@ -1,0 +1,117 @@
+# HG changeset patch
+# User Bruno Postle <bruno@postle.net>
+# Date 1578230319 0
+#      Sun Jan 05 13:18:39 2020 +0000
+# Node ID f21f594a875663d8cd8d9b6453a584de7e4da730
+# Parent  067ba3cedc20f23cf2e50111cd14338678b81194
+Fix appdata files and install to /usr/share/metainfo instead of deprecated /usr/share/appdata
+
+diff -r 067ba3cedc20 -r f21f594a8756 platforms/linux/appdata/CMakeLists.txt
+--- a/platforms/linux/appdata/CMakeLists.txt	Sat Jan 04 10:07:17 2020 +0100
++++ b/platforms/linux/appdata/CMakeLists.txt	Sun Jan 05 13:18:39 2020 +0000
+@@ -1,5 +1,5 @@
+ IF (UNIX)
+ # install appdata files
+-  INSTALL(FILES calibrate_lens_gui.appdata.xml hugin.appdata.xml PTBatcherGUI.appdata.xml DESTINATION ${DATADIR}/appdata)
++  INSTALL(FILES calibrate_lens_gui.appdata.xml hugin.appdata.xml PTBatcherGUI.appdata.xml DESTINATION ${DATADIR}/metainfo)
+ ENDIF (UNIX)
+ 
+diff -r 067ba3cedc20 -r f21f594a8756 platforms/linux/appdata/PTBatcherGUI.appdata.xml
+--- a/platforms/linux/appdata/PTBatcherGUI.appdata.xml	Sat Jan 04 10:07:17 2020 +0100
++++ b/platforms/linux/appdata/PTBatcherGUI.appdata.xml	Sun Jan 05 13:18:39 2020 +0000
+@@ -1,8 +1,18 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2014 Terry Duell -->
+-<application>
+- <id type="desktop">PTBatcherGUI.desktop</id>
+- <licence>GFDL</licence>
++<component type="desktop">
++ <id>PTBatcherGUI.desktop</id>
++ <releases>
++  <release date="2019-12-30" version="2019.2.0" />
++  <release date="2019-04-05" version="2019.0.0" />
++  <release date="2018-02-03" version="2018.0.0" />
++  <release date="2017-06-30" version="2017.0.0" />
++ </releases>
++ <launchable type="desktop-id">PTBatcherGUI.desktop</launchable>
++ <translation type="gettext">ptbatchergui</translation>
++ <metadata_license>GFDL</metadata_license>
++ <project_license>GPL-2.0-or-later</project_license>
++ <content_rating type="oars-1.1" />
+  <name>Hugin batch processor</name>
+  <summary>A GUI queue manager for stitching multiple hugin projects</summary>
+  <description>
+@@ -26,5 +36,5 @@
+   <screenshot type="default" width="800" height="600">http://hugin.sourceforge.net/screenshots/appdata/ptbatcher.png</screenshot>
+  </screenshots>
+  <url type="homepage">http://hugin.sourceforge.net/</url>
+- <updatecontact>tduell_at_iinet.net.au</updatecontact>
+-</application>
++ <update_contact>tduell_at_iinet.net.au</update_contact>
++</component>
+diff -r 067ba3cedc20 -r f21f594a8756 platforms/linux/appdata/calibrate_lens_gui.appdata.xml
+--- a/platforms/linux/appdata/calibrate_lens_gui.appdata.xml	Sat Jan 04 10:07:17 2020 +0100
++++ b/platforms/linux/appdata/calibrate_lens_gui.appdata.xml	Sun Jan 05 13:18:39 2020 +0000
+@@ -1,8 +1,18 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2014 Terry Duell -->
+-<application>
+- <id type="desktop">calibrate_lens_gui.desktop</id>
+- <licence>GFDL</licence>
++<component type="desktop">
++ <id>calibrate_lens_gui.desktop</id>
++ <releases>
++  <release date="2019-12-30" version="2019.2.0" />
++  <release date="2019-04-05" version="2019.0.0" />
++  <release date="2018-02-03" version="2018.0.0" />
++  <release date="2017-06-30" version="2017.0.0" />
++ </releases>
++ <launchable type="desktop-id">calibrate_lens_gui.desktop</launchable>
++ <translation type="gettext">calibrate_lens_gui</translation>
++ <metadata_license>GFDL</metadata_license>
++ <project_license>GPL-2.0-or-later</project_license>
++ <content_rating type="oars-1.1" />
+  <name>Hugin calibrate lens</name>
+  <summary>Automatic lens calibration</summary>
+  <description>
+@@ -25,5 +35,5 @@
+   <screenshot type="default" width="800" height="600">http://hugin.sourceforge.net/screenshots/appdata/calib-lens.png</screenshot>
+  </screenshots>
+  <url type="homepage">http://hugin.sourceforge.net/</url>
+- <updatecontact>tduell_at_iinet.net.au</updatecontact>
+-</application>
++ <update_contact>tduell_at_iinet.net.au</update_contact>
++</component>
+diff -r 067ba3cedc20 -r f21f594a8756 platforms/linux/appdata/hugin.appdata.xml
+--- a/platforms/linux/appdata/hugin.appdata.xml	Sat Jan 04 10:07:17 2020 +0100
++++ b/platforms/linux/appdata/hugin.appdata.xml	Sun Jan 05 13:18:39 2020 +0000
+@@ -1,8 +1,18 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2014 Terry Duell -->
+-<application>
+- <id type="desktop">hugin.desktop</id>
+- <licence>GFDL</licence>
++<component type="desktop">
++ <id>hugin.desktop</id>
++ <releases>
++  <release date="2019-12-30" version="2019.2.0" />
++  <release date="2019-04-05" version="2019.0.0" />
++  <release date="2018-02-03" version="2018.0.0" />
++  <release date="2017-06-30" version="2017.0.0" />
++ </releases>
++ <launchable type="desktop-id">hugin.desktop</launchable>
++ <translation type="gettext">hugin</translation>
++ <metadata_license>GFDL</metadata_license>
++ <project_license>GPL-2.0-or-later</project_license>
++ <content_rating type="oars-1.1" />
+  <name>hugin</name>
+  <summary>A panoramic photo stitcher and more</summary>
+  <description>
+@@ -30,5 +40,5 @@
+   <screenshot width="800" height="600">http://hugin.sourceforge.net/screenshots/appdata/hugin-5.png</screenshot>
+  </screenshots>
+  <url type="homepage">http://hugin.sourceforge.net/</url>
+- <updatecontact>tduell_at_iinet.net.au</updatecontact>
+-</application>
++ <update_contact>tduell_at_iinet.net.au</update_contact>
++</component>

@@ -1,0 +1,170 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package yockgen01
+dpkg-buildpackage: info: source version 0.1-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by yockgen <yockgen@gmail.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean  
+   dh_clean
+	rm -f debian/debhelper-build-stamp
+	rm -rf debian/.debhelper/
+	rm -f -- debian/yockgen01.substvars debian/files
+	rm -fr -- debian/yockgen01/ debian/tmp/
+	find .  \( \( \
+		\( -path .\*/.git -o -path .\*/.svn -o -path .\*/.bzr -o -path .\*/.hg -o -path .\*/CVS -o -path .\*/.pc -o -path .\*/_darcs \) -prune -o -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} + \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building yockgen01 using existing ./yockgen01_0.1.orig.tar.gz
+dpkg-source: info: building yockgen01 in yockgen01_0.1-1.debian.tar.xz
+dpkg-source: info: building yockgen01 in yockgen01_0.1-1.dsc
+ debian/rules build
+dh build  
+   dh_update_autotools_config
+   dh_autoreconf
+   dh_auto_configure
+	install -d obj-x86_64-linux-gnu
+	cd obj-x86_64-linux-gnu && cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_SYSCONFDIR=/etc -DCMAKE_INSTALL_LOCALSTATEDIR=/var -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON -DCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY=ON -DCMAKE_INSTALL_RUNSTATEDIR=/run "-GUnix Makefiles" -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_AUTOGEN_VERBOSE=ON -DCMAKE_INSTALL_LIBDIR=lib/x86_64-linux-gnu ..
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_AUTOGEN_VERBOSE
+    CMAKE_EXPORT_NO_PACKAGE_REGISTRY
+    CMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY
+    CMAKE_INSTALL_LIBDIR
+    CMAKE_INSTALL_LOCALSTATEDIR
+    CMAKE_INSTALL_RUNSTATEDIR
+    CMAKE_INSTALL_SYSCONFDIR
+
+
+-- Build files have been written to: /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu
+   dh_auto_build
+	cd obj-x86_64-linux-gnu && make -j4 "INSTALL=install --strip-program=true"
+make[1]: Entering directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu'
+/usr/bin/cmake -S/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1 -B/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu/CMakeFiles /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu'
+make -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/depend
+make[3]: Entering directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu'
+cd /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1 /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1 /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu/CMakeFiles/app.dir/DependInfo.cmake --color=
+Scanning dependencies of target app
+make[3]: Leaving directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu'
+make -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
+make[3]: Entering directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu'
+[ 50%] Building C object CMakeFiles/app.dir/src/yockgen.o
+/usr/bin/cc   -g -O2 -fdebug-prefix-map=/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1=. -fstack-protector-strong -Wformat -Werror=format-security -Wall -pedantic -Wdate-time -D_FORTIFY_SOURCE=2   -o CMakeFiles/app.dir/src/yockgen.o   -c /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/src/yockgen.c
+[100%] Linking C executable app
+/usr/bin/cmake -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=1
+/usr/bin/cc -g -O2 -fdebug-prefix-map=/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1=. -fstack-protector-strong -Wformat -Werror=format-security -Wall -pedantic -Wdate-time -D_FORTIFY_SOURCE=2  -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -rdynamic CMakeFiles/app.dir/src/yockgen.o  -o app 
+make[3]: Leaving directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu'
+[100%] Built target app
+make[2]: Leaving directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu'
+/usr/bin/cmake -E cmake_progress_start /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu/CMakeFiles 0
+make[1]: Leaving directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu'
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary  
+   dh_testroot
+   dh_prep
+	rm -f -- debian/yockgen01.substvars
+	rm -fr -- debian/.debhelper/generated/yockgen01/ debian/yockgen01/ debian/tmp/
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1'
+dh_auto_install -- prefix=/usr
+	install -d /home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/debian/yockgen01
+make[1]: Leaving directory '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1'
+   dh_installdocs
+	install -d debian/yockgen01/usr/share/doc/yockgen01
+	install -d debian/.debhelper/generated/yockgen01
+	install -p -m0644 debian/README.Debian debian/yockgen01/usr/share/doc/yockgen01/README.Debian
+	install -p -m0644 debian/copyright debian/yockgen01/usr/share/doc/yockgen01/copyright
+   dh_installchangelogs
+	install -p -m0644 debian/changelog debian/yockgen01/usr/share/doc/yockgen01/changelog.Debian
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+	cd debian/yockgen01
+	chmod a-x usr/share/doc/yockgen01/changelog.Debian
+	gzip -9nf usr/share/doc/yockgen01/changelog.Debian
+	cd '/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1'
+   dh_fixperms
+	find debian/yockgen01 -true -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/yockgen01 ! -type l -a -true -a -true -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/yockgen01/usr/share/doc -type f -a -true -a ! -regex 'debian/yockgen01/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/yockgen01/usr/share/doc -type d -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0755
+	find debian/yockgen01 -type f \( -name '*.so.*' -o -name '*.so' -o -name '*.la' -o -name '*.a' -o -name '*.js' -o -name '*.css' -o -name '*.scss' -o -name '*.sass' -o -name '*.jpeg' -o -name '*.jpg' -o -name '*.png' -o -name '*.gif' -o -name '*.cmxs' -o -name '*.node' \) -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0644
+   dh_missing
+   dh_strip
+   dh_makeshlibs
+	rm -f debian/yockgen01/DEBIAN/shlibs
+   dh_shlibdeps
+   dh_installdeb
+	install -d debian/yockgen01/DEBIAN
+   dh_gencontrol
+	echo misc:Depends= >> debian/yockgen01.substvars
+	echo misc:Pre-Depends= >> debian/yockgen01.substvars
+	dpkg-gencontrol -pyockgen01 -ldebian/changelog -Tdebian/yockgen01.substvars -Pdebian/yockgen01
+dpkg-gencontrol: warning: Depends field of package yockgen01: substitution variable ${shlibs:Depends} used, but is not defined
+	chmod 0644 -- debian/yockgen01/DEBIAN/control
+	chown 0:0 -- debian/yockgen01/DEBIAN/control
+   dh_md5sums
+	cd debian/yockgen01 >/dev/null && xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums
+	chmod 0644 -- debian/yockgen01/DEBIAN/md5sums
+	chown 0:0 -- debian/yockgen01/DEBIAN/md5sums
+   dh_builddeb
+	dpkg-deb --build debian/yockgen01 ..
+dpkg-deb: building package 'yockgen01' in '../yockgen01_0.1-1_amd64.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../yockgen01_0.1-1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian yockgen01_0.1-1_amd64.changes ...
+E: yockgen01: changelog-is-dh_make-template
+E: yockgen01: extended-description-is-empty
+W: yockgen01 source: ancient-standards-version 3.9.6 (released 2014-09-17) (current is 4.5.0)
+W: yockgen01: copyright-has-url-from-dh_make-boilerplate
+W: yockgen01: empty-binary-package
+W: yockgen01 source: file-without-copyright-information CMakeLists.txt
+W: yockgen01 source: file-without-copyright-information debian/README.Debian
+W: yockgen01 source: file-without-copyright-information debian/changelog
+W: yockgen01 source: file-without-copyright-information debian/compat
+W: yockgen01 source: file-without-copyright-information debian/control
+W: yockgen01 source: file-without-copyright-information debian/copyright
+W: yockgen01 source: file-without-copyright-information debian/patches/series
+W: yockgen01 source: file-without-copyright-information debian/rules
+W: yockgen01 source: file-without-copyright-information debian/source/format
+W: yockgen01 source: file-without-copyright-information debian/source/local-options
+W: yockgen01 source: file-without-copyright-information debian/watch
+W: yockgen01 source: missing-license-paragraph-in-dep5-copyright mit (paragraph at line 5)
+W: yockgen01: new-package-should-close-itp-bug
+W: yockgen01 source: package-needs-versioned-debhelper-build-depends 11
+W: yockgen01: readme-debian-contains-debmake-template
+W: yockgen01: wrong-bug-number-in-closes l3:#nnnn
+Finished running lintian.

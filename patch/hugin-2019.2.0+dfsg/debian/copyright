@@ -1,0 +1,670 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: hugin
+Source: http://sourceforge.net/projects/hugin/
+Files-Excluded: platforms/windows mac/*
+ platforms/mac/*
+X-Removed-Reason: Only needed on non-Debian platforms.
+
+
+
+# --- ./
+
+Files: *
+X-copied-from: authors.txt
+Copyright:
+ Copyright 2004-2019
+ Pablo d'Angelo	Original Author, GSoC 2007 and 2008 mentor, German translation, original CMake build, original Windows SDK
+ Florian Achleitner	GSoC 2010 Makefile lib
+ Bart van Andel	Bugfix
+ György Balló	original Hungarian translation
+ Herbert Bay	GSoC 2007 mentor
+ Kai-Uwe Behrmann	gui, panoviewer adds, original German translation
+ Kornel Benko	maintenance CMake build
+ Stephen Bennett	show points patch
+ Jakub Bogusz	Polish translation
+ Pavel Heimlich	Fixes Solaris build
+ Luís Henrique Camargo Quiroz	Brazilian translation
+ Albert Capellades Badia	original Catalan translation
+ Carlos Eduardo G. Carvalho	Original FreeBSD port
+ Milo Casagrande	Italian translation
+ Vaclav Cerny	Czech translation
+ Jean-Luc Coulon	original French translation
+ Marco Cucinato	Italian translation
+ Antoine Deleforge	GSoC 2010 patent free control point detector
+ Ademar de Souza Reis Jr.	original Brazilian translation and translation related fixes
+ Vasil Dimov	FreeBSD port maintainer
+ Serhij Dubyk	initial Ukrainian translation
+ Terry Duell	updated tutorials, Fedora tester and packager
+ Alexandre Duret-Lutz	code
+ Davide Fabbri	Bugfixes, Windows build
+ Lu Fang	initial Chinese Simplified translation
+ Skip Gaede	OS X build fixes
+ Daniel German	bug fixes, GSoC mentor 2010
+ Niels Giesen	Dutch translation
+ Jorge González González	original Spanish translation
+ Felix Hagemann	bug reports and patches
+ Ed Halley	gui, documentation
+ Robert Hart	bug reports and patches
+ Stephan Hegel	Initial Doxygen configuration
+ Juha Helminen	Code
+ Brian Hoffmann	German translation of NSIS windows installer
+ Lajos Höss	Hungarian translation
+ Ad Huikeshoven	automated Windows snapshot builds
+ Iouri Ivliev	bug fixes
+ Kay F. Jahnke	Python scripting interface, bug fixes
+ Marek Januszewski	Code, initial Polish translation
+ Alexandre Jenny	SpaceTransform class, GSoC 2008 mentoring
+ Jing Jin	GSoC 2007 deghosting
+ Lukáš Jirkovský	GSoC 2009 deghosting in enfuse
+ Gareth Jones	British English translation
+ Ewing Kang	Traditional Chinese translation
+ Allard Katan	Windows installer
+ Guido Kohlmeyer	German translation, Windows SDK, bug fixes
+ Erik Krause	Enfuse and enblend droplets for Windows
+ Uwe Koch Kronberg	Spanish translation
+ Marco Kuder	GSoC 2008 batch processor
+ Rick Langford	Traditional Chinese original translation and updates
+ Homin Lee	initial Korean translation
+ James Legg	GSoC 2008 OpenGL fast preview, GSoC 2009 new layout, GSoC 2010 mentor
+ Yuval Levy	Community Builder, GSoC admin 2007 and 2009, GSoC mentor 2007 and 2008, Windows build, original Windows installer (0.7.0 and 0.8.0 InnoSetup), bugfixes, fixes Italian translation, release manager 2009.2 and 2010.4
+ Wim Lewis	Code fix
+ Roger Luethi	Code
+ Darko Makreshanski	GSoC 2010 Overview for Fast Preview
+ Caolán McNamara	code fix
+ Cristian Marchi	Italian translation and 2010 artwork
+ Zoran Mesec	GSoC 2007 feature detector, GSoC 2008 mentor, initial Slovenian translation
+ Andreas Metzler	Debian packaging
+ Niklas Mischkulnig	OS X builder
+ Andrew Mihal	original author of enblend, enfuse, nona-gpu. GSoC 2009 mentor
+ Thomas Modes	statistic CP cleaner, multi-row CP detection, masking tool, GSoC 2010 mentor, code and bugfixes
+ Tiziano Müller	code
+ Vladimir Nadvornik	Stereo images alignment
+ John Navas	MSI installer
+ Victor Nezhelskiy	Russian translation
+ José Alejandro Carrillo Neira	Spanish translation
+ Tim Nugent	GSoC 2008 Celeste, GSoC 2009 Lens Calibration, GSoC 2010 mentor
+ Simon Oosthoek	Dutch translation
+ Anael Orlinski	initial control point detector
+ Emanuele Panz	Windows installer (2010.02 transition to Nullsoft NSIS)
+ Gerry Patterson	Code
+ Eduardo Pérez Esteban	Spanish translation
+ Matthew Petroff	Windows installer and icons
+ Bruno Postle	initial packaging, website, documentation, initial British English translation, GSoC 2009 mentor, GSoC 2010 admin and mentor, release manager on many occasions including 2010.02
+ Thomas Pryds	Danish translation
+ Alexandre Prokoudine	Initial Russian translation, GSoC 2008 admin
+ Jozef Riha	original Slovak translation
+ Marijn Ros	bug reports and patches
+ Maider Likona Santamarina	Basque translation
+ Joachim Schneider	German translation
+ Tom Sharpless	Windows build, GSoC 2009 mentor, code
+ Jiri Slaby	original Czech translation
+ Ryan Sleevi	Windows 64-bit patches, patches and SDK
+ Michał Smoczyk	Polish translation
+ Svetoslav Stefanov	Bulgarian initial translation
+ Gary Stein	Autocrop functionality
+ Hajime Taira	Japanese translation
+ Riz Thon	French translation
+ Dave Tow	cmake patch
+ Brent Townshend	code and bug fixes
+ Masahiro Kitagawa	Japanese translation updates
+ Lorenz Trischberger	German translation
+ Ken Turkowski	code
+ Ippei Ukai	MacOSX port, initial Japanese translation, GSoC 2007 code refactoring
+ Harry van der Wolf	original Dutch translation, OSX build
+ Mihai Varzaru	Original Romanian translation
+ Luca Vascon	splash screen, icons, original Italian translation
+ Fabian Wetzel	Panoglview
+ Ulf Wilhelmson	original Swedish translation
+ Douglas Wilkins	packaging, translation, bugfixes
+ Ziv Yaniv	RanSaC code
+License: GPL-2+
+
+
+
+
+# --- CMakeModules/
+Files: CMakeModules/FindJPEG.cmake
+ CMakeModules/FindMSGFMT.cmake
+ CMakeModules/FindPANO13.cmake
+ CMakeModules/FindPNG.cmake
+ CMakeModules/FindTIFF.cmake
+ CMakeModules/FindZLIB.cmake
+Copyright: © 2007 TKSharpless
+License: MISSING_2
+X-Upstream-To-Do: Add license/copyright statements.
+
+Files: CMakeModules/FindEXIV2.cmake
+ CMakeModules/FindGLEW.cmake
+ CMakeModules/FindPackageHandleStandardArgs.cmake
+ CMakeModules/HuginMacros.cmake
+ CMakeModules/FindGLUT.cmake
+ CMakeModules/FindCXX11Compiler.cmake
+ CMakeModules/FindFFTW.cmake
+ CMakeModules/FindSQLite3.cmake
+ CMakeModules/FindVIGRA.cmake
+ CMakeModules/win_bundle.cmake
+Copyright: UNKNOWN
+License: MISSING_3
+X-Upstream-To-Do: Add license/copyright statements.
+
+Files: CMakeModules/FindNSIS.cmake
+Copyright:  (C) 2010 Matthew Petroff
+License: GPL-2+
+Comment: Original work for hugin, based on FindPANO13 by TKSharpless
+
+Files: CMakeModules/FindLAPACK.cmake
+Copyright: (C) 2009 Lukas Jirkovsky
+License: GPL-2+
+Comment: Original work for hugin, based on FindPANO13 by TKSharpless
+
+Files: CMakeModules/FindFLANN.cmake CMakeModules/FindZThread.cmake
+Copyright: (C) 2011 Andreas Metzler
+License: public-domain
+
+Files: CMakeModules/FindLibraryWithDebug.cmake
+Copyright: © 2007 Christian Ehrlicher <ch.ehrlicher@gmx.de>
+License: BSD-3-clause
+
+Files: CMakeModules/FindOpenEXR.cmake
+Copyright: © 2006 Alexander Neundorf <neundorf@kde.org>
+License: BSD-3-clause
+
+Files: CMakeModules/FindMSGFMT.cmake
+Copyright: Copyright 2006-2008
+ Pedro Lopez-Cabanillas <plcl@users.sourceforge.net>
+License: GPL-2+
+Comment: See https://sourceforge.net/p/rosegarden/code/8960/
+ in rosegarden svn
+
+Files: CMakeModules/FindPkgConfig.cmake
+Copyright: © 2006 Enrico Scholz <enrico.scholz@informatik.tu-chemnitz.de>
+License: BSD-2
+ | Redistribution and use, with or without modification, are permitted
+ | provided that the following conditions are met:
+ |
+ |    1. Redistributions must retain the above copyright notice, this
+ |       list of conditions and the following disclaimer.
+ |    2. The name of the author may not be used to endorse or promote
+ |       products derived from this software without specific prior
+ |       written permission.
+ |
+ | THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ | IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ | WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ | ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ | DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ | DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ | GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ | INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+ | IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ | OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ | IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Files: CMakeModules/FindLCMS2.cmake
+Copyright: Thomas Modes
+License: GPL-2+
+Comment: Original work for hugin
+
+
+
+# --- platforms/
+
+
+Files: platforms/windows/droplets/*
+Copyright: © 2008 Erik Krause
+License: GPL-2+
+Comment: They are free software; you can redistribute them and/or modify
+ them under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+
+Files: platforms/windows/msi/*
+Copyright: NONE
+License: NONE
+
+Files: platforms/linux/enfuse-raw.sh
+Copyright: © 2008 Simon Oosthoek
+License: GPL-2+
+
+Files: platforms/linux/smartblend*
+Copyright: 2008 Bob Bright <bbbri...@gmail.com>
+License: NONE
+
+
+# --- src/celeste/
+
+Files: src/celeste/svm.h
+ src/celeste/svm.cpp
+Copyright: 2000-2014 Chih-Chung Chang and Chih-Jen Lin
+License: BSD-3
+ | All rights reserved.
+ |
+ | Redistribution and use in source and binary forms, with or without
+ | modification, are permitted provided that the following conditions
+ | are met:
+ |
+ | 1. Redistributions of source code must retain the above copyright
+ | notice, this list of conditions and the following disclaimer.
+ |
+ | 2. Redistributions in binary form must reproduce the above copyright
+ | notice, this list of conditions and the following disclaimer in the
+ | documentation and/or other materials provided with the distribution.
+ |
+ | 3. Neither name of copyright holders nor the names of its contributors
+ | may be used to endorse or promote products derived from this software
+ | without specific prior written permission.
+ |
+ |
+ | THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ | ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ | LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ | A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR
+ | CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ | EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ | PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ | PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ | LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ | NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ | SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Files: src/celeste/ContrastFilter.cpp
+ src/celeste/ContrastFilter.h
+ src/celeste/GaborFilter.cpp
+ src/celeste/GaborFilter.h
+ src/celeste/GaborGlobal.h
+ src/celeste/GaborJet.cpp
+ src/celeste/GaborJet.h
+ src/celeste/ImageFile.cpp
+ src/celeste/ImageFile.h
+ src/celeste/PGMImage.cpp
+ src/celeste/PGMImage.h
+ src/celeste/Utilities.cpp
+ src/celeste/Utilities.h
+Copyright: (c) 2002-3 Adriaan Tijsseling
+License: GPL-2+
+
+
+# --- src/foreign/
+
+Files: src/foreign/flann/*
+Comment: Not used in Debian, hugin uses external flann if available.
+Copyright: Copyright 2008-2009  Marius Muja (mariusm@cs.ubc.ca).
+ Copyright 2008-2009  David G. Lowe (lowe@cs.ubc.ca)
+License: BSD-2-clause
+ * Software License Agreement (BSD License)
+ *
+ * Copyright 2008-2009  Marius Muja (mariusm@cs.ubc.ca). All rights reserved.
+ * Copyright 2008-2009  David G. Lowe (lowe@cs.ubc.ca). All rights reserved.
+ *
+ * THE BSD LICENSE
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+X-URL: http://www.cs.ubc.ca/~mariusm/index.php/FLANN/FLANN/
+
+
+Files: src/foreign/getopt/include/getopt.h
+ src/foreign/getopt/src/*
+Copyright: © 1989, 1990, 1991, 1992, 1993 Free Software Foundation, Inc.
+License: GPL-2+
+
+Files: src/foreign/levmar/*
+Copyright: © 2004-2005 Manolis Lourakis <lourakis at ics forth gr>
+                       Institute of Computer Science, Foundation for Research
+                       & Technology - Hellas Heraklion, Crete, Greece.
+License: GPL-2+
+
+
+# --- src/hugin_base/
+
+Files: src/hugin_base/hugin_utils/stl_utils.h
+Copyright: © 1994 Hewlett-Packard Company
+           © 1996 Silicon Graphics Computer Systems, Inc.
+License: old-style-MIT
+ | taken from the GNU/sgi stl extensions
+ |
+ | Permission to use, copy, modify, distribute and sell this software
+ | and its documentation for any purpose is hereby granted without fee,
+ | provided that the above copyright notice appear in all copies and
+ | that both that copyright notice and this permission notice appear
+ | in supporting documentation.  Silicon Graphics makes no
+ | representations about the suitability of this software for any
+ | purpose.  It is provided "as is" without express or implied warranty.
+
+Files: src/hugin_base/vigra_ext/emor.cpp
+Copyright: © 2004 Computer Vision Laboratory, Columbia University
+License: MIT-modern-style-with-sublicense
+ | Permission is hereby granted, free of charge, to any person obtaining a copy
+ | of this software and associated documentation files (the "Software"), to deal
+ | in the Software without restriction, including without limitation the rights
+ | to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ | copies of the Software, and to permit persons to whom the Software is
+ | furnished to do so, subject to the following conditions:
+ |
+ | The above copyright notice and this permission notice shall be included in
+ | all copies or substantial portions of the Software.
+ |
+ | THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ | IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ | FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ | AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ | LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ | OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ | THE SOFTWARE.
+Comment:
+ | The EMoR model is described in this paper
+ |  "Modeling the Space of Camera Response Functions,"
+ |  M.D. Grossberg and S.K. Nayar,
+ |  IEEE Transactions on Pattern Analysis and Machine Intelligence,
+ |  Vol.26, No.10, pp.1272-1282, Oct, 2004.
+
+Files: src/hugin_base/vigra_ext/openmp_vigra.h
+Copyright: (C) 2013, 2014 Christoph L. Spiel
+License: GPL-2+
+
+Files: src/hugin_base/hugin_utils/alphanum.cpp
+ src/hugin_base/hugin_utils/alphanum.h
+Copyright: (c) 2008 Dirk Jagdmann <doj@cubic.org>
+License: Zlib
+ | The Alphanum Algorithm is an improved sorting algorithm for strings
+ | containing numbers.  Instead of sorting numbers in ASCII order like a
+ | standard sort, this algorithm sorts numbers in numeric order.
+ |
+ | The Alphanum Algorithm is discussed at http://www.DaveKoelle.com
+ |
+ | This implementation is Copyright (c) 2008 Dirk Jagdmann <doj@cubic.org>.
+ | It is a cleanroom implementation of the algorithm and not derived by
+ | other's works. In contrast to the versions written by Dave Koelle this
+ | source code is distributed with the libpng/zlib license.
+ |
+ | This software is provided 'as-is', without any express or implied
+ | warranty. In no event will the authors be held liable for any damages
+ | arising from the use of this software.
+ |
+ | Permission is granted to anyone to use this software for any purpose,
+ | including commercial applications, and to alter it and redistribute it
+ | freely, subject to the following restrictions:
+ |
+ |     1. The origin of this software must not be misrepresented; you
+ |        must not claim that you wrote the original software. If you use
+ |        this software in a product, an acknowledgment in the product
+ |        documentation would be appreciated but is not required.
+ |
+ |     2. Altered source versions must be plainly marked as such, and
+ |        must not be misrepresented as being the original software.
+ |
+ |     3. This notice may not be removed or altered from any source
+ |        distribution. */
+
+Files: src/hugin_base/hugin_math/eig_jacobi.cpp
+Copyright: Copyright Mike Ess, Ippei UKAI
+License: MISSING_1
+ | /** @file jacobi_eig.cpp
+ |  *
+ |  *  @author mike_ess@yahoo.com
+ |  *
+ |  *  Function comes from http://mywebpages.comcast.net/mike_ess/
+ |  *
+ |  *  $Id: eig_jacobi.cpp 2510 2007-10-28 22:24:11Z dangelo $
+ |  *
+ |  */
+X-To-Do: Check copyright holders and license.
+ https://sites.google.com/site/essmike/
+
+Files: src/hugin_base/vigra_ext/pyramid2.h
+Copyright: © 2004-2007 Andrew Mihal
+License: GPL-2+
+
+
+
+# --- src/hugin1/
+
+Files: src/hugin1/*
+Copyright: © Pablo d'Angelo <pablo.dangelo@web.de>
+           © Jing Jin <jingidy@gmail.com>
+           © Philippe Thomin <philippe.thomin@univ-valenciennes.fr>
+           © Antoine Lefebvre <antoine.lefebvre@polymtl.ca>
+           © T. Modes
+           © Y. Levy
+License: GPL-2+
+
+Files: src/hugin1/hugin/treelistctrl.cpp src/hugin1/hugin/treelistctrl.h
+Copyright: (c) 2004-2011 Robert Roebling, Julian Smart, Alberto Griggio,
+        Vadim Zeitlin, Otto Wyss, Ronan Chartois
+License: wxWindows
+ The wxWindows Library Licence (WXwindows) [OSI Approved License] The wxWindows
+ Library Licence
+ .
+ Copyright (c) 1998 Julian Smart, Robert Roebling [, ...]
+ .
+ Everyone is permitted to copy and distribute verbatim copies of this licence
+ document, but changing it is not allowed.
+ .
+ WXWINDOWS LIBRARY LICENCE TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND
+ MODIFICATION
+ .
+ This library is free software; you can redistribute it and/or modify it under
+ the terms of the GNU Library General Public Licence as published by the Free
+ Software Foundation; either version 2 of the Licence, or (at your option) any
+ later version.
+ .
+ This library is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU Library General Public Licence for more
+ details.
+ .
+ You should have received a copy of the GNU Library General Public Licence along
+ with this software, usually in a file named COPYING.LIB. If not,
+ write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth
+ Floor, Boston, MA 02110-1301 USA.
+ .
+ EXCEPTION NOTICE
+ .
+ 1. As a special exception, the copyright holders of this library give
+ permission for additional uses of the text contained in this release of the
+ library as licenced under the wxWindows Library Licence, applying either
+ version 3 of the Licence, or (at your option) any later version of the Licence
+ as published by the copyright holders of version 3 of the Licence document.
+ .
+ 2. The exception is that you may use, copy, link, modify and distribute under
+ the user's own terms, binary object code versions of works based on the
+ Library.
+ .
+ 3. If you copy code from files distributed under the terms of the GNU General
+ Public Licence or the GNU Library General Public Licence into a copy of this
+ library, as this licence permits, the exception does not apply to the code that
+ you add in this way. To avoid misleading anyone as to the status of such
+ modified files, you must delete this exception notice from such code and/or
+ adjust the licensing conditions notice accordingly.
+ .
+ 4. If you write modifications of your own for this library, it is your choice
+ whether to permit this exception to apply to your modifications. If you do not
+ wish that, you must delete the exception notice from such code and/or adjust
+ the licensing conditions notice accordingly.
+Comment: http://sourceforge.net/projects/wxcode/
+  http://wxcode.sourceforge.net/rules.php
+  Each component must be made available under the wxWindows license.
+
+# --- src/translations/
+
+Files: src/translations/*
+Copyright: © 2004 Pablo dAngelo <pablo.dangelo@web.de>
+           © 2004-2008 Jean-Luc Coulon (f5ibh) <jean-luc.coulon@wanadoo.fr>
+           © 2004 Douglas Wilkins <douglasw@zahav.co.il>
+           © 2004 Lorenz Trischberger <trischberger@ilo.de>
+           © 2004 Marek Januszewski <spec@webtech.pl>
+           © 2005-2006 Jakub Bogusz <qboosh@pld-linux.org>
+           © 2005-2007 Ademar de Souza Reis Jr. <ademar@ademar.org>
+           © 2005-2011 Alexandre Prokoudine <alexandre.prokoudine@gmail.com>
+           © 2005-2008 Balló György <ballogy@freestart.hu>
+           © 2005-2008 Ippei UKAI <ippei_ukai@mac.com>
+           © 2005 Harry van der Wolf <harryvanderwolf@xs4all.nl>
+	   © 2005 Ippei UKAI <ippei_ukai (at mac.com>
+           © 2005 Luca Vascon <crimsonkingit@yahoo.com>
+           © 2006-2011 Jozef Riha <jose1711@gmail.com>
+           © 2006 Jiri Slaby <jirislaby@gmail.com>
+           © 2006 Serhij Dubyk <dubyk@library.lviv.ua>
+           © 2007-2008 Jorge González <jorgegonz@svn.gnome.org>
+	   © 2007-2009 Milo Casagrande <milo@ubuntu.com>
+           © 2007 Michał Smoczyk <msmoczyk@wp.pl>
+           © 2007 Ulf Wilhelmson <ulf.wilhelmson@gmail.com>
+           © 2008 Albert Capellades Badia <albertcba@gmail.com>
+	   © 2008 Höss Lajos <pgc1682@freemail.hu>
+           © 2008 Joachim Schneider <j-schneid@gmx.de>
+	   © 2008 José Alejandro Carrillo Neira <j.alec.n@gmail.com>
+	   © 2008 Juha Helminen <juha.helminen@iki.fi>
+	   © 2008 Lu Fang
+	   © 2008 Rick Langford <ruei_ke@yahoo.com>
+	   © 2008 Serhij Dubyk <dubyk@library.lviv.ua>
+           © 2008 Simon Oosthoek <simon@margo.student.utwente.nl>
+	   © 2008 Svetoslav Stefanov
+	   © 2009-2010 Cristian Marchi <cri.penta@gmail.com>
+	   © 2010 Hajime, Taira <htaira@redhat.com>
+	   © 2010 KITAGAWA, Masahiro <arctica0316@gmail.com>
+	   © 2011-2013 Thomas Pryds <thomas@pryds.eu>
+	   © 2011-2012 Gareth Jones <gareth.k.jones@gmail.com>
+	   © 2012 Maider Likona Santamarina <pisoni@gisa-elkartea.org>
+	   © 2008 homin,Lee <ff4500@gmail.com>
+	   © 2010-2013 Luís Henrique Camargo Quiroz <luishcq@gmail.com>
+	   © 2011 Mihai Varzaru
+	   © 2009 Zoran Mesec <zoran.mesec@gmail.com>
+	   © 2010 Ewing Kang <f039281310@yahoo.com.tw>
+	   © 2014, 2015 Carles Ferrando Garcia <carles.ferrando@gmail.com>
+	   ©
+	   ©
+	   ©
+	   ©
+	   ©
+License: GPL-2+
+
+
+
+
+# --- debian/
+
+Files: debian/*
+Copyright: © 2006-2007 Florent Bayle <fbayle@bigfoot.com>
+           © 2007-2008 Cyril Brulebois <kibi@debian.org>
+           © 2008 Sebastian Harl <sh@tokkee.org>
+           © 2009-2015 Andreas Metzler <ametzler@debian.org>
+           © 2015 Stefan Peter <s_peter@swissonline.ch>
+License: GPL-2+
+
+
+Files: doc/align_image_stack.pod
+ doc/autooptimiser.pod
+ doc/fulla.pod
+ doc/hugin_hdrmerge.pod
+ doc/hugin.pod
+ doc/hugin_stitch_project.pod
+ doc/nona.pod
+ doc/vig_optimize.pod
+Copyright: 2008 Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
+License: GPL-2+
+Comment: Licensed under the same terms as the hugin package itself.
+
+Files: doc/calibrate_lens_gui.pod
+Copyright: 2011 Bruno Postle <bruno@postle.net>
+License: GPL-2+
+Comment: Licensed under the same terms as the hugin package itself.
+
+Files: src/hugin_base/vigra_ext/impexalpha.hxx
+Copyright: 2012 Christoph Spiel
+License: VIGRA_License
+ /*    This file is part of the VIGRA computer vision library.           */
+ /*    The VIGRA Website is                                              */
+ /*        http://hci.iwr.uni-heidelberg.de/vigra/                       */
+ /*    Please direct questions, bug reports, and contributions to        */
+ /*        ullrich.koethe@iwr.uni-heidelberg.de    or                    */
+ /*        vigra@informatik.uni-hamburg.de                               */
+ /*                                                                      */
+ /*    Permission is hereby granted, free of charge, to any person       */
+ /*    obtaining a copy of this software and associated documentation    */
+ /*    files (the "Software"), to deal in the Software without           */
+ /*    restriction, including without limitation the rights to use,      */
+ /*    copy, modify, merge, publish, distribute, sublicense, and/or      */
+ /*    sell copies of the Software, and to permit persons to whom the    */
+ /*    Software is furnished to do so, subject to the following          */
+ /*    conditions:                                                       */
+ /*                                                                      */
+ /*    The above copyright notice and this permission notice shall be    */
+ /*    included in all copies or substantial portions of the             */
+ /*    Software.                                                         */
+ /*                                                                      */
+ /*    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND    */
+ /*    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES   */
+ /*    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          */
+ /*    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       */
+ /*    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      */
+ /*    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      */
+ /*    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR     */
+ /*    OTHER DEALINGS IN THE SOFTWARE.                                   */
+
+Files: *.appdata.xml
+Copyright: 2014 Terry Duell
+ 2019 Bruno Postl
+License: GFDL
+
+License: GPL-2+
+ | This package is free software; you can redistribute it and/or modify
+ | it under the terms of the GNU General Public License as published by
+ | the Free Software Foundation; either version 2 of the License, or
+ | (at your option) any later version.
+ |
+ | This package is distributed in the hope that it will be useful,
+ | but WITHOUT ANY WARRANTY; without even the implied warranty of
+ | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ | GNU General Public License for more details.
+ |
+ | You should have received a copy of the GNU General Public License
+ | along with this package;  If not, see <http://www.gnu.org/licenses/>
+ |
+ | On Debian systems, the complete text of the GPL version 2 can be
+ | found in /usr/share/common-licenses/GPL-2.
+
+License: BSD-3-clause
+ | Redistribution and use in source and binary forms, with or without
+ | modification, are permitted provided that the following conditions
+ | are met:
+ |
+ | 1. Redistributions of source code must retain the copyright
+ |    notice, this list of conditions and the following disclaimer.
+ | 2. Redistributions in binary form must reproduce the copyright
+ |    notice, this list of conditions and the following disclaimer in the
+ |    documentation and/or other materials provided with the distribution.
+ | 3. The name of the author may not be used to endorse or promote products
+ |    derived from this software without specific prior written permission.
+ |
+ | THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ | IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ | OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ | IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ | INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ | NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ | DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ | THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ | (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ | THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: GFDL
+ Licensed GNU Free Documentation License without any specific version.
+ On Debian systems a copy of the GFDL 1.3 can be found in 
+ /usr/share/common-licenses/GFDL-1.3

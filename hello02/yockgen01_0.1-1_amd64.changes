@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Mon, 16 Aug 2021 09:12:26 +0800
+Source: yockgen01
+Binary: yockgen01
+Architecture: source amd64
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: yockgen <yockgen@gmail.com>
+Changed-By: yockgen <yockgen@gmail.com>
+Description:
+ yockgen01  - yockgen Demo Debian Package.
+Changes:
+ yockgen01 (0.1-1) UNRELEASED; urgency=low
+ .
+   * Initial release. Closes: #nnnn
+     <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ cbbae469fb7c5ed5075499eb84a1cb55542be832 812 yockgen01_0.1-1.dsc
+ f0f3fe60e1ec08c3d835e780954a3e52d3e84879 1528 yockgen01_0.1.orig.tar.gz
+ 0227186c8c0a9b36bd38ec398ed1c33c0b67e174 1180 yockgen01_0.1-1.debian.tar.xz
+ 706ad88a82b73e2b8c69b8f931ae65348f73f2a5 5701 yockgen01_0.1-1_amd64.buildinfo
+ e0e58ae1c9e55b3352e21525270311e018ad35f9 1516 yockgen01_0.1-1_amd64.deb
+Checksums-Sha256:
+ 494f8b0d69b5647a2b9cfcc7028994579c374e4d982731129bd1997695c90307 812 yockgen01_0.1-1.dsc
+ 5e9dfbf0cfd77af68ac1ebf046160477223d664736462ec6c3a0afb4b9036d35 1528 yockgen01_0.1.orig.tar.gz
+ ae2eefbcfba07b708fc91c2bcda98a83c18f1fc9be34a0e8a0ed24e321148062 1180 yockgen01_0.1-1.debian.tar.xz
+ f7394662eee71a0def2d8588dcf9d5128d58d04086c78923c51a73a9d62fb769 5701 yockgen01_0.1-1_amd64.buildinfo
+ faed1b09437e0c3f89032d5b4213d80348596373ac881f9a3e89f539cad730e3 1516 yockgen01_0.1-1_amd64.deb
+Files:
+ 576e445a1d6c88bbb411cc8861f68dd1 812 non-free/graphics optional yockgen01_0.1-1.dsc
+ 87ca698c9d30c75c3923f6d5187edf27 1528 non-free/graphics optional yockgen01_0.1.orig.tar.gz
+ 973ec40cbffcc6a4a757fe0268f673f4 1180 non-free/graphics optional yockgen01_0.1-1.debian.tar.xz
+ f77ca027d3022457b53015c7f66882c8 5701 non-free/graphics optional yockgen01_0.1-1_amd64.buildinfo
+ 2f84f385f86e659c3283a953ef2101c5 1516 non-free/graphics optional yockgen01_0.1-1_amd64.deb

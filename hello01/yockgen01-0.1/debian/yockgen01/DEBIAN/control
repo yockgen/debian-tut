@@ -1,0 +1,11 @@
+Package: yockgen01
+Version: 0.1-1
+Architecture: amd64
+Maintainer: yockgen <yockgen@gmail.com>
+Installed-Size: 25
+Depends: libc6 (>= 2.2.5)
+Section: non-free/graphics
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://github.com/yockgen/
+Description: yockgen Demo Debian Package.

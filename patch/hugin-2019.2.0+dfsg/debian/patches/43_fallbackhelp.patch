@@ -1,0 +1,20 @@
+Author: Andreas Metzler
+Description: Invoke sensible-browser instead of using 
+ wxLaunchDefaultBrowser(). The latter does not work on e.g. windowmaker.
+Last-Update: 2017-12-09
+
+--- a/src/hugin1/hugin/HtmlWindow.cpp
++++ b/src/hugin1/hugin/HtmlWindow.cpp
+@@ -31,7 +31,11 @@ IMPLEMENT_DYNAMIC_CLASS(HtmlWindow, wxHt
+ void HtmlWindow::OnLinkClicked(const wxHtmlLinkInfo& link)
+ {
+     if (link.GetHref().StartsWith(_T("http://")))
+-        wxLaunchDefaultBrowser(link.GetHref());
++    {
++        /* wxLaunchDefaultBrowser(link.GetHref()); */
++        wxString cmd = (wxT("sensible-browser ") + link.GetHref());
++        wxExecute(cmd, wxEXEC_ASYNC);
++    }
+     else
+         wxHtmlWindow::OnLinkClicked(link);
+ }

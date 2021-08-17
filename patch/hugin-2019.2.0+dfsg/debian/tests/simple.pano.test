@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -e
+
+WORKDIR=$(mktemp -d --suffix=.hugin)
+mkdir "$WORKDIR/home" "$WORKDIR/xdg"
+export HOME="$WORKDIR/home"
+export XDG_RUNTIME_DIR="$WORKDIR/xdg"
+#trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+
+cp debian/tests/data/* $WORKDIR
+cd $WORKDIR
+
+# rm -f  pano-tmp.pto pano.pto pano.mk *.tif pano.pto_generated.arg
+
+pto_gen -o pano.pto left.jpeg right.jpeg
+cpfind -o pano-tmp.pto pano.pto
+mv pano-tmp.pto pano.pto
+celeste_standalone -o pano-tmp.pto -i pano.pto
+mv pano-tmp.pto pano.pto
+cpclean -o pano-tmp.pto pano.pto
+mv pano-tmp.pto pano.pto
+autooptimiser -a -s -o pano-tmp.pto pano.pto
+mv pano-tmp.pto pano.pto
+pano_modify --crop=AUTO -o pano-tmp.pto pano.pto
+mv pano-tmp.pto pano.pto
+checkpto pano.pto
+hugin_executor --stitching --prefix=pano pano.pto
+ls -l
+if ! test -e pano.tif; then
+    echo "ERROR: pano.tif not found!" >&2
+    exit 1
+fi

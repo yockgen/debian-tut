@@ -1,0 +1,3 @@
+/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu/CMakeFiles/rebuild_cache.dir
+/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu/CMakeFiles/edit_cache.dir
+/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1/obj-x86_64-linux-gnu/CMakeFiles/app.dir

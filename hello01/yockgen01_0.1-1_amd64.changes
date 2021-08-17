@@ -1,0 +1,38 @@
+Format: 1.8
+Date: Mon, 16 Aug 2021 09:12:26 +0800
+Source: yockgen01
+Binary: yockgen01
+Architecture: source amd64
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: yockgen <yockgen@gmail.com>
+Changed-By: yockgen <yockgen@gmail.com>
+Description:
+ yockgen01  - yockgen Demo Debian Package.
+Changes:
+ yockgen01 (0.1-1) UNRELEASED; urgency=low
+ .
+   * Initial release. Closes: #nnnn
+     <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ 7c073575da5e33c5e6ede2de8406f392ef59a565 809 yockgen01_0.1-1.dsc
+ cd1582de6fb949685fd0690fd52094703f66eba1 526 yockgen01_0.1.orig.tar.gz
+ 0227186c8c0a9b36bd38ec398ed1c33c0b67e174 1180 yockgen01_0.1-1.debian.tar.xz
+ a48961b198a90ae0b0c976619d930759cc4384d7 3964 yockgen01-dbgsym_0.1-1_amd64.ddeb
+ 4f74de93afb24c18bfde13a8612694be77964589 5960 yockgen01_0.1-1_amd64.buildinfo
+ a5cea489891d66d56e8c797bb362d3aa93f2ebaa 3192 yockgen01_0.1-1_amd64.deb
+Checksums-Sha256:
+ d9b954b71066d2d73c8afcf3c66fe7269c4294f7ccb7e7f2302be1c2869d5ea5 809 yockgen01_0.1-1.dsc
+ 7afe9e16b33340942ed612fc9422f1ff12a009c27a09ec208524df20d54bf593 526 yockgen01_0.1.orig.tar.gz
+ ae2eefbcfba07b708fc91c2bcda98a83c18f1fc9be34a0e8a0ed24e321148062 1180 yockgen01_0.1-1.debian.tar.xz
+ d0fb4c892f9bee7008322dd42ec01ae1a1402685a61ca7917cdb2fe744bc98b6 3964 yockgen01-dbgsym_0.1-1_amd64.ddeb
+ ed731a72a20b0c83d76c7178d0dcff097be64f33cf90fd935272f208bd5f4e88 5960 yockgen01_0.1-1_amd64.buildinfo
+ 76b3ea205ece785a55842c46da6588b55f37e2f636cdb581314c416763e186d3 3192 yockgen01_0.1-1_amd64.deb
+Files:
+ 8b12278878c758d341fc03947c3c8b43 809 non-free/graphics optional yockgen01_0.1-1.dsc
+ aa5c3ae970182473b12c7a5b334817c6 526 non-free/graphics optional yockgen01_0.1.orig.tar.gz
+ 973ec40cbffcc6a4a757fe0268f673f4 1180 non-free/graphics optional yockgen01_0.1-1.debian.tar.xz
+ 402a76fdf728d09619d806533a922e35 3964 non-free/debug optional yockgen01-dbgsym_0.1-1_amd64.ddeb
+ 9672223e6ee7bbff27300687176705eb 5960 non-free/graphics optional yockgen01_0.1-1_amd64.buildinfo
+ ea1e5f37e50b3af9d8d84df97d16a2cc 3192 non-free/graphics optional yockgen01_0.1-1_amd64.deb

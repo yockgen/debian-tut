@@ -1,0 +1,4 @@
+30_add_hugin_stacker_manpage.diff
+43_fallbackhelp.patch
+50_f21f594a8756_8265_Fix_appdata_files.diff
+51_yockgen01.patch

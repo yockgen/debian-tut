@@ -1,0 +1,13 @@
+Package: yockgen01-dbgsym
+Package-Type: ddeb
+Source: yockgen01
+Version: 0.1-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: yockgen <yockgen@gmail.com>
+Installed-Size: 18
+Depends: yockgen01 (= 0.1-1)
+Section: non-free/debug
+Priority: optional
+Description: debug symbols for yockgen01
+Build-Ids: 99d24838c9b0d20f36071a4ab25f17c46e002cb7

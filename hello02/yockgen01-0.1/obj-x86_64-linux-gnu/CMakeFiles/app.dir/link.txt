@@ -1,0 +1,1 @@
+/usr/bin/cc -g -O2 -fdebug-prefix-map=/home/yockgen/Desktop/debian-tut/hello02/yockgen01-0.1=. -fstack-protector-strong -Wformat -Werror=format-security -Wall -pedantic -Wdate-time -D_FORTIFY_SOURCE=2  -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -rdynamic CMakeFiles/app.dir/src/yockgen.o  -o app 
